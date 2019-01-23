@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>YAPP</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="terminarSessao()">
+        <ion-icon name="power"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<br>
+
+<ion-content padding center style="text-align: center">
+  <br>
+  <div text-center="">
+    <img src="assets/imgs/user.png" width="20%">
+  </div>
+  <br>
+  <h4 style="text-align: center">Perfil pessoal</h4>
+
+  <ion-list>
+    <ion-item>
+      <p>Nome</p>
+      <ion-item-divider>{{(dados | async)?.nome}}</ion-item-divider>
+      <br>
+      <p>Apelido</p>
+      <ion-item-divider>{{(dados | async)?.apelido}}</ion-item-divider>
+      <br>
+      <p>Contacto</p>
+      <ion-item-divider>{{(dados | async)?.telemovel}}</ion-item-divider>
+      <br>
+      <p>Cuidador responsável</p>
+      <ion-item-divider *ngFor="let cuidador of Cuidadores; let i = index">{{cuidador}}</ion-item-divider>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

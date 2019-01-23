@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar></ion-navbar>
+</ion-header>
+<ion-content padding>
+
+  <ion-list>
+    <br>
+    <br>
+    <ion-item>
+      <ion-input  type="text" placeholder="Nome próprio" [(ngModel)]="utente.nome" ></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input  type="text" placeholder="Apelido" [(ngModel)]="utente.apelido"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input type="text" placeholder="Email" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input type="number" placeholder="Número de telemóvel" [(ngModel)]="utente.telemovel"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input [type]="PasswordType" placeholder="Password" [(ngModel)]="user.password"></ion-input>
+      <ion-icon (click)="verPass()"  [name]="PasswordShow === true ? 'eye' : 'eye-off' "  style="z-index: 1000;"  color="gray" item-end></ion-icon>
+
+    </ion-item>
+
+    <br>
+
+    <br>
+    <ion-item>
+      <ion-label>Tipo de utilizador</ion-label>
+      <ion-select [(ngModel)]="utente.tipoUtilizador">
+        <ion-option value="cuidador">Cuidador</ion-option>
+        <ion-option value="utente">Utente</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+  </ion-list>
+
+  <br>
+  <button ion-button full (click)="criarConta(user, utente)">Terminar Registo</button>
+
+
+</ion-content>

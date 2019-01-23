@@ -1,0 +1,54 @@
+<!--
+  Generated template for the EditarDadosPessoaisPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>YAPP</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <br>
+  <div text-center="" (click)="uploadFoto()">
+    <img src="assets/imgs/user.png" width="20%">
+  </div>
+
+
+  <ion-list>
+
+    <br>
+    <ion-item>
+      <ion-input type="text" placeholder="{{(perfilDados | async)?.nome}}" [(ngModel)]="utente.nome"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input type="text" placeholder="{{(perfilDados | async)?.apelido}}" [(ngModel)]="utente.apelido"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input type="text" placeholder="{{(perfilDados | async)?.email}}" [(ngModel)]="utente.email"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input type="text" placeholder="{{(perfilDados | async)?.telemovel}}" [(ngModel)]="utente.telemovel"></ion-input>
+    </ion-item>
+    <br>
+
+
+    <br>
+
+
+  </ion-list>
+
+  <ion-buttons>
+    <button ion-button full (click)="guardarAlteracoes(utente)">Guardar alterações</button>
+  </ion-buttons>
+
+</ion-content>

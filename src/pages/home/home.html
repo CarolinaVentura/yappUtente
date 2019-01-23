@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar style="background-color: #007aff">
+        <ion-title>YAPP</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="terminarSessao()">
+                <ion-icon name="power"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding style="text-align: center;">
+    <br><br><br>
+    <h2>Olá {{(dados | async)?.nome}}!</h2>
+    <br>
+    <h6 style="text-align: center; font-weight: lighter">
+        A nossa aplicação tem como principal objetivo ajudá-lo a ter assistência mesmo quando estiver sozinho em casa ou
+        na rua.
+    </h6>
+    <br><br>
+    <div text-center>
+        <img src="assets/imgs/buttonCall.png" (click)="call()" width="30%">
+    </div>
+
+    <br><br>
+    <h6 style="text-align: center; font-weight: inherit;">
+        Em caso de <span style="color:red">emergência</span> pressione o botão durante 5 segundos.
+    </h6>
+
+
+
+
+</ion-content>

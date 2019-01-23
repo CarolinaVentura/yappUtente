@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      YAPP
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="terminarSessao()">
+        <ion-icon name="power"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<br><br><br>
+<ion-content>
+  <ion-list>
+    <br><br>
+    <ion-title>
+      Definições da conta
+    </ion-title><br>
+    <ion-item (click)="redifine()">
+      <ion-icon name="lock" item-start ></ion-icon>
+      Redifinir palavra-passe
+    </ion-item>
+    <ion-item (click)="edit()">
+      <ion-icon name="create" item-start ></ion-icon>
+      Editar dados pessoais
+    </ion-item>
+    <ion-item (click)="emergencyContact()">
+      <ion-icon name="call" item-start ></ion-icon>
+      Definir contactos de emergência
+    </ion-item>
+  </ion-list>
+</ion-content>
